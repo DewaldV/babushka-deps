@@ -1,25 +1,28 @@
-dep "autohide", :template => "defaults" do
+dep "dock-autohide.defaults" do
+  key "autohide"
   domain "com.apple.dock"
   type "int"
   value "1"
   after { "killall -HUP Dock" }
 end 
 
-dep "mcx-disabled", :template => "defaults" do
+dep "dashboard-disable.defaults", :template => "defaults" do
+  key "mcx-disabled"
   domain "com.apple.dashboard"
   type "int"
   value "1"
   after { "killall -HUP Dock" }
 end
 
-dep "com.apple.keyboard.fnState", :template => "defaults" do
+dep "keyboard-enable-function-keys.defaults", :template => "defaults" do
+  key "com.apple.keyboard.fnState"
   type "int"
   value "1"
   global? true
 end
 
 dep "osx-settings" do
-  requires "autohide"
-  requires "mcx-disabled"
-  requires "com.apple.keyboard.fnState"
+  requires "dock-autohide.defaults"
+  requires "dashboard-disable.defaults"
+  requires "keyboard-enable-function-keys.defaults"
 end
