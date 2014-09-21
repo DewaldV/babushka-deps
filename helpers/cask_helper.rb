@@ -1,4 +1,5 @@
 # A PkgHelper for managing Homebrew Cask packages
+# Original from: https://github.com/bradfeehan/babushka-deps
 class CaskHelper < Babushka::BrewHelper
   class << self
     def pkg_cmd; 'brew cask' end
