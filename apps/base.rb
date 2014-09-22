@@ -1,4 +1,4 @@
-# system.rb
+# base.rb
 
 dep 'homebrew-cask.lib' do
   installs 'brew-cask'
