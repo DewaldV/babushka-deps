@@ -1,10 +1,3 @@
-dep "dock-autohide.defaults" do
-  key "autohide"
-  domain "com.apple.dock"
-  type "int"
-  value "1"
-  after { "killall -HUP Dock" }
-end 
 
 dep "dashboard-disable.defaults" do
   key "mcx-disabled"
