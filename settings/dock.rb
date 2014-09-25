@@ -15,28 +15,29 @@ dep 'dock-magnification.defaults' do
 end
 
 dep 'documents.dockicon' do
-  name 'Documents'
+  label 'Documents'
   path '~/Documents' 
 end
 
 dep 'downloads.dockicon' do
-  name 'Downloads'
+  label 'Downloads'
   path '~/Downloads'
 end
 
 dep 'home.dockicon' do
-  name 'Home'
+  label 'Home'
   path '~/'
 end
 
 dep 'dock-default-icons' do
-  requires 'downloads.dockicon'
-  requires 'documents.dockicon'
   requires 'home.dockicon'
+  requires 'documents.dockicon'
+  requires 'downloads.dockicon'
 end
 
 dep 'osx-settings-dock' do
   requires 'dock-autohide.defaults'
   requires 'dock-magnification.defaults'
+  requires 'dock-default-icons'
   after { 'killall -HUP Dock' }
 end

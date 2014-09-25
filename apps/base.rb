@@ -4,6 +4,8 @@ dep 'homebrew-cask.lib' do
   installs 'brew-cask'
 end
 
+dep 'dockutil.bin'
+
 dep 'dropbox.cask'
 
 dep 'htop.bin' do
@@ -35,6 +37,7 @@ end
 
 dep 'osx-core-apps' do
   requires 'homebrew-cask.lib'
+  requires 'dockutil.bin'
   requires 'dropbox.cask'
   requires 'htop.bin'
   requires 'iterm2.cask'

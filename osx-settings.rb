@@ -15,7 +15,7 @@ dep "keyboard-enable-function-keys.defaults" do
 end
 
 dep "osx-settings" do
-  requires "dock-autohide.defaults"
+  requires "osx-settings-dock"
   requires "dashboard-disable.defaults"
   requires "keyboard-enable-function-keys.defaults"
 end
