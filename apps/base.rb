@@ -5,10 +5,25 @@ dep 'homebrew-cask.lib' do
 end
 
 dep 'dropbox.cask'
+
+dep 'htop.bin' do
+  installs 'htop-osx'
+end
+
 dep 'iterm2.cask'
-dep 'macvim.cask'
+
+dep 'mvim.bin' do
+  installs 'macvim'
+end
+
 dep 'onepassword.cask'
+
 dep 'rescuetime.cask'
+
 dep 'spectacle.cask'
+
+dep 'vim.bin'
+
 dep 'xquartz.cask'
+
 dep 'zsh.bin'
