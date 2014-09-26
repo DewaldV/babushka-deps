@@ -21,16 +21,23 @@ dep 'dock-tilesize.defaults' do
   value '48'
 end
 
-dep 'dock-remove-all-icons' do
-  met? { shell('dockutil --list') == '' }
-  meet { shell('dockutil --remove all') }
-end
-
 dep 'dock-size-immutable.defaults' do
   key 'size-immutable'
   domain 'com.apple.dock'
   type 'int'
   value '1'
+end
+
+dep 'dock-default-settings' do
+  requires 'dock-autohide.defaults'
+  requires 'dock-magnification.defaults'
+  requires 'dock-tilesize.defaults'
+  requires 'dock-size-immutable.defaults'
+end
+
+dep 'dock-remove-all-icons' do
+  met? { shell('dockutil --list') == '' }
+  meet { shell('dockutil --remove all') }
 end
 
 dep 'documents.dockicon' do
@@ -102,10 +109,7 @@ dep 'dock-default-apps' do
 end
 
 dep 'osx-settings-dock' do
-  requires 'dock-autohide.defaults'
-  requires 'dock-magnification.defaults'
-  requires 'dock-tilesize.defaults'
-  requires 'dock-size-immutable.defaults'
+  requires 'dock-default-settings'
   requires 'dock-default-icons'
   requires 'dock-default-apps'
   after { 'killall -HUP Dock' }
