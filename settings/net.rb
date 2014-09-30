@@ -1,12 +1,22 @@
 # net.rb
 
-dep 'hostname' do
-  met? { shell('hostname') == 'virtue.local' }
-  meet { sudo('scutil --set HostName virtue.local') }
+dep 'net-hostname.scutil' do
+  perf 'HostName'
+  value 'virtue'
 end
 
+dep 'net-computername.scutil' do
+  perf 'ComputerName'
+  value 'virtue'
+end
 
+dep 'net-localhostname.scutil' do
+  perf 'LocalHostName'
+  value 'virtue'
+end
 
-#sudo scutil --set ComputerName '0x6D746873'
-#sudo scutil --set HostName '0x6D746873'
-#sudo scutil --set LocalHostName '0x6D746873'
+dep 'osx-settings-net' do
+  requires 'net-hostname.scutil'
+  requires 'net-computername.scutil'
+  requires 'net-localhostname.scutil'
+end
