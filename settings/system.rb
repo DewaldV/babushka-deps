@@ -36,11 +36,20 @@ dep 'disable-smart-quotes.defaults' do
   value '0'
 end
 
-dep 'disable-smart-dashes.default' do
+dep 'disable-smart-dashes.defaults' do
   key 'NSAutomaticDashSubstitutionEnabled'
   global? true
   type 'int'
   value '0'
+end
+
+dep 'osx-settings-system' do
+  requires 'save-to-disk.defaults'
+  requires 'disable-quarantine.defaults'
+  requires 'show-admin-host-info.defaults'
+  requires 'check-updates-daily.defaults'
+  requires 'disable-smart-quotes.defaults'
+  requires 'disable-smart-dashes.defaults'
 end
 
 # Disable local Time Machine snapshots

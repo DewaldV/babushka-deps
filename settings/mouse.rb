@@ -7,7 +7,7 @@ dep 'enable-tap-bluetooth.defaults' do
   value '1'
 end
 
-dep 'enable-tap-behaviour' do
+dep 'enable-tap-behaviour.defaults' do
   key 'com.apple.mouse.tapBehavior'
   global? true
   type'int'
@@ -16,7 +16,7 @@ end
 
 dep 'enable-tap-click' do
   requires 'enable-tap-bluetooth.defaults'
-  requires 'enable-tap-behavior.defaults'
+  requires 'enable-tap-behaviour.defaults'
 end
 
 dep 'enable-right-click-corner.defaults' do
