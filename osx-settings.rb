@@ -1,18 +1,4 @@
-
-dep "dashboard-disable.defaults" do
-  key "mcx-disabled"
-  domain "com.apple.dashboard"
-  type "int"
-  value "1"
-  after { "killall -HUP Dock" }
-end
-
-dep "keyboard-enable-function-keys.defaults" do
-  key "com.apple.keyboard.fnState"
-  type "int"
-  value "1"
-  global? true
-end
+# osx-settings.rb
 
 dep "osx-settings" do
   requires "osx-settings-dock"
