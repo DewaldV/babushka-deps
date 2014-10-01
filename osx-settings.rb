@@ -6,4 +6,5 @@ dep 'osx-settings' do
   requires 'osx-settings-keyboard'
   requires 'osx-settings-system'
   requires 'osx-settings-net'
+  requires 'osx-settings-regional'
 end

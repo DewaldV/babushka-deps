@@ -5,6 +5,7 @@ dep 'save-to-disk.defaults' do
   global? true
   type 'int'
   value '0'
+  doSudo? true
 end
 
 dep 'disable-quarantine.defaults' do
@@ -34,6 +35,7 @@ dep 'disable-smart-quotes.defaults' do
   global? true
   type 'int'
   value '0'
+  doSudo? true
 end
 
 dep 'disable-smart-dashes.defaults' do
@@ -41,6 +43,7 @@ dep 'disable-smart-dashes.defaults' do
   global? true
   type 'int'
   value '0'
+  doSudo? true
 end
 
 dep 'osx-settings-system' do
