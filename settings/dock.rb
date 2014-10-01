@@ -74,22 +74,22 @@ end
 
 dep 'firefox.dockicon' do
   label 'FireFox'
-  path '/Applications/Firefox.app'
+  path '~/Applications/Firefox.app'
 end
 
 dep 'opera.dockicon' do
   label 'Opera'
-  path '/Applications/Opera.app'
+  path '~/Applications/Opera.app'
 end
 
 dep 'chrome.dockicon' do
   label 'Chrome'
-  path '/Applications/Google\ Chrome.app'
+  path '~/Applications/Google\ Chrome.app'
 end
 
 dep 'steam.dockicon' do
   label 'Steam'
-  path '/Applications/Steam.app'
+  path '~/Applications/Steam.app'
 end
 
 dep 'iterm2.dockicon' do
