@@ -5,13 +5,15 @@ dep 'keyboard-enable-function-keys.defaults' do
   type 'int'
   value '1'
   global? true
+  doSudo? true
 end
 
 dep 'disable-auto-correct.defaults' do
   key 'NSAutomaticSpellingCorrectionEnabled'
-  global? true
   type 'int'
   value '0'
+  global? true
+  doSudo? true
 end
 
 dep 'osx-settings-keyboard' do

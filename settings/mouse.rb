@@ -55,7 +55,7 @@ dep 'enable-right-click' do
 end
 
 dep 'osx-settings-mouse' do
-  requires 'enable-tap-click'
-  requires 'enable-right-click'
+#  requires 'enable-tap-click'
+#  requires 'enable-right-click'
 end
 

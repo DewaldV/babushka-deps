@@ -41,6 +41,7 @@ dep 'osx-core-apps' do
   requires 'dropbox.cask'
   requires 'htop.bin'
   requires 'iterm2.cask'
+#  requires 'mvim.bin'
   requires 'onepassword.cask'
   requires 'vim.bin'
   requires 'zsh.bin'

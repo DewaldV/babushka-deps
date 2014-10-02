@@ -11,7 +11,7 @@ meta :defaults do
   template {
     global = 'NSGlobalDomain'
     setup { @key = key || name }
-    met? { shell?("defaults read #{global? ? global : ''} #{domain} #{@key}") && shell("defaults read #{global? ? global : ''} #{domain} #{@key}") == value }
+    met? { shell?("defaults read #{global? ? global : ''} #{domain} #{@key}", :sudo => doSudo?) && shell("defaults read #{global? ? global : ''} #{domain} #{@key}", :sudo => doSudo?) == value }
     meet { shell("defaults write #{global? ? global : ''} #{domain} #{@key} -#{type} #{value}", :sudo => doSudo?) }
   }
 end
