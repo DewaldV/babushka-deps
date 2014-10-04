@@ -30,7 +30,9 @@ dep 'lein.bin' do
   installs 'leiningen'
 end
 
-dep 'maven.bin'
+dep 'mvn.bin' do
+  installs 'maven'
+end
 
 dep 'node.bin'
 
@@ -63,7 +65,7 @@ end
 dep 'osx-dev-java' do
   requires 'java.cask'
   requires 'gradle.bin'
-  requires 'maven.bin'
+  requires 'mvn.bin'
   requires 'intellij-idea.cask'
 end
 
