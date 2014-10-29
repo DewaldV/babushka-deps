@@ -14,6 +14,8 @@ end
 
 dep 'iterm2.cask'
 
+dep 'istat-menus.cask'
+
 dep 'mvim.bin' do
   installs 'macvim'
 end
@@ -40,6 +42,7 @@ dep 'osx-core-apps' do
   requires 'dockutil.bin'
   requires 'dropbox.cask'
   requires 'htop.bin'
+  requires 'istat-menus.cask'
   requires 'iterm2.cask'
 #  requires 'mvim.bin'
   requires 'onepassword.cask'
