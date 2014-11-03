@@ -2,6 +2,8 @@
 
 dep 'adobe-reader.cask'
 
+dep 'colorpicker-antetype.cask'
+
 dep 'gimp.cask'
 
 dep 'inkscape.cask'
