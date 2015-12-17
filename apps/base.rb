@@ -32,7 +32,7 @@ dep 'vim.bin'
 
 dep 'xquartz.cask'
 
-dep 'zsh.bin' 
+dep 'zsh.bin'
 
 dep 'osx-core-all' do
   requires 'osx-core-apps'
@@ -47,7 +47,7 @@ dep 'osx-core-apps' do
   requires 'tree.bin'
   requires 'istat-menus.cask'
   requires 'iterm2.cask'
-#  requires 'mvim.bin'
+  #  requires 'mvim.bin'
   requires 'onepassword.cask'
   requires 'vim.bin'
   requires 'zsh.bin'

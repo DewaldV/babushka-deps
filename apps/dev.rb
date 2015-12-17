@@ -73,7 +73,7 @@ dep 'osx-dev-ruby' do
   requires 'ruby-build.bin'
   requires 'rbenv.bin'
   requires 'rbenv-gem-rehash.lib'
-#  requires 'pry.bin'
+  #  requires 'pry.bin'
 end
 
 dep 'osx-dev-tools' do
@@ -97,7 +97,7 @@ dep 'osx-dev-js' do
 end
 
 dep 'osx-dev-alt-lang' do
-  requires 'io.bin'  
+  requires 'io.bin'
   requires 'go.bin'
   requires 'pebble.bin'
 end

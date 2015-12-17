@@ -34,10 +34,10 @@ dep 'timezone' do
 end
 
 dep 'osx-settings-regional' do
-#  requires 'osx-locale.defaults'
+  #  requires 'osx-locale.defaults'
   requires 'osx-measurementunits.defaults'
   requires 'osx-metricunits.defaults'
   requires 'timezone'
 end
 
-#defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+# defaults write NSGlobalDomain AppleLanguages -array "en" "nl"

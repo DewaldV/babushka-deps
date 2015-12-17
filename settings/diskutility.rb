@@ -18,4 +18,3 @@ dep 'osx-settings-diskutility' do
   requires 'diskutility-enable-advanced.defaults'
   requires 'diskutility-enable-debug.defaults'
 end
-

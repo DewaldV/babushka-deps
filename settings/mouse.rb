@@ -10,7 +10,7 @@ end
 dep 'enable-tap-behaviour.defaults' do
   key 'com.apple.mouse.tapBehavior'
   global? true
-  type'int'
+  type 'int'
   value '1'
 end
 
@@ -55,7 +55,6 @@ dep 'enable-right-click' do
 end
 
 dep 'osx-settings-mouse' do
-#  requires 'enable-tap-click'
-#  requires 'enable-right-click'
+  #  requires 'enable-tap-click'
+  #  requires 'enable-right-click'
 end
-

@@ -1,7 +1,7 @@
 # system.rb
 
 dep 'save-to-disk.defaults' do
-  key 'NSDocumentSaveNewDocumentsToCloud'  
+  key 'NSDocumentSaveNewDocumentsToCloud'
   type 'int'
   value '0'
   global? true
@@ -49,11 +49,11 @@ end
 dep 'osx-settings-system' do
   requires 'save-to-disk.defaults'
   requires 'disable-quarantine.defaults'
-#  requires 'show-admin-host-info.defaults'
+  #  requires 'show-admin-host-info.defaults'
   requires 'check-updates-daily.defaults'
-#  requires 'disable-smart-quotes.defaults'
-#  requires 'disable-smart-dashes.defaults'
+  #  requires 'disable-smart-quotes.defaults'
+  #  requires 'disable-smart-dashes.defaults'
 end
 
 # Disable local Time Machine snapshots
-#sudo tmutil disablelocal
+# sudo tmutil disablelocal

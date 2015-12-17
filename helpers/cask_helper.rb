@@ -2,10 +2,21 @@
 # Original from: https://github.com/bradfeehan/babushka-deps
 class CaskHelper < Babushka::BrewHelper
   class << self
-    def pkg_cmd; 'brew cask' end
-    def manager_dep; 'homebrew-cask.lib' end
-    def pkg_type; :cask end
-    def manager_key; :cask end
+    def pkg_cmd
+      'brew cask'
+    end
+
+    def manager_dep
+      'homebrew-cask.lib'
+    end
+
+    def pkg_type
+      :cask
+    end
+
+    def manager_key
+      :cask
+    end
 
     def present?
       Babushka::BrewHelper.has? cask_package_name
@@ -19,13 +30,13 @@ class CaskHelper < Babushka::BrewHelper
       'brew-cask'
     end
 
-    def all_versions_of pkg
+    def all_versions_of(pkg)
       pkg_name = pkg.respond_to?(:name) ? pkg.name : pkg
       Dir[
         installed_pkgs_path / pkg_name / '*'
-      ].map {|i|
+      ].map do|i|
         File.basename i.chomp('/')
-      }.map(&:to_s)
+      end.map(&:to_s)
     end
 
     def cask_prefix
@@ -33,33 +44,34 @@ class CaskHelper < Babushka::BrewHelper
     end
 
     def caskroom
-      "/opt/homebrew-cask/Caskroom".p
+      '/opt/homebrew-cask/Caskroom'.p
     end
 
     private
-      def has_pkg? pkg
-        all_versions_of(pkg).any?
-      end
 
-      def pkg_update_command
-        "brew update"
-      end
+    def has_pkg?(pkg)
+      all_versions_of(pkg).any?
+    end
 
-      def cmdline_spec_for pkg
-        pkg.name
-      end
+    def pkg_update_command
+      'brew update'
+    end
 
-      def existing_formulas
-        Dir[formulas_path / '*.rb']
-      end
+    def cmdline_spec_for(pkg)
+      pkg.name
+    end
 
-      def installed_pkgs_path
-        caskroom
-      end
+    def existing_formulas
+      Dir[formulas_path / '*.rb']
+    end
 
-      def formulas_path
-	cask_prefix / 'Casks'
-      end
+    def installed_pkgs_path
+      caskroom
+    end
+
+    def formulas_path
+      cask_prefix / 'Casks'
+    end
   end
 end
 

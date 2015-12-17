@@ -1,4 +1,4 @@
-# dock.rb 
+# dock.rb
 
 dep 'dock-autohide.defaults' do
   key 'autohide'
@@ -42,7 +42,7 @@ end
 
 dep 'documents.dockicon' do
   label 'Documents'
-  path '~/Documents' 
+  path '~/Documents'
 end
 
 dep 'downloads.dockicon' do
