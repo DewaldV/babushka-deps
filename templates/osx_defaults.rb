@@ -1,5 +1,3 @@
-# osx-defaults.rb
-
 meta :defaults do
   accepts_value_for :domain
   accepts_value_for :key
@@ -11,7 +9,13 @@ meta :defaults do
   template do
     global = 'NSGlobalDomain'
     setup { @key = key || name }
-    met? { shell?("defaults read #{global? ? global : ''} #{domain} #{@key}", sudo: doSudo?) && shell("defaults read #{global? ? global : ''} #{domain} #{@key}", sudo: doSudo?) == value }
-    meet { shell("defaults write #{global? ? global : ''} #{domain} #{@key} -#{type} #{value}", sudo: doSudo?) }
+    met? do
+      command = "defaults read #{global? ? global : ''} #{domain} #{@key}"
+      shell?(command, sudo: doSudo?) && shell(command, sudo: doSudo?) == value
+    end
+    meet do
+      command = "defaults write #{global? ? global : ''} #{domain} #{@key} -#{type} #{value}"
+      shell(command, sudo: doSudo?)
+    end
   end
 end
