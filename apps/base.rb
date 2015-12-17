@@ -12,6 +12,8 @@ dep 'htop.bin' do
   installs 'htop-osx'
 end
 
+dep 'tree.bin'
+
 dep 'iterm2.cask'
 
 dep 'istat-menus.cask'
@@ -42,6 +44,7 @@ dep 'osx-core-apps' do
   requires 'dockutil.bin'
   requires 'dropbox.cask'
   requires 'htop.bin'
+  requires 'tree.bin'
   requires 'istat-menus.cask'
   requires 'iterm2.cask'
 #  requires 'mvim.bin'
