@@ -2,17 +2,17 @@
 
 dep 'net-hostname.scutil' do
   perf 'HostName'
-  value 'virtue'
+  value 'DewaldV-MBP'
 end
 
 dep 'net-computername.scutil' do
   perf 'ComputerName'
-  value 'virtue'
+  value 'DewaldV-MBP'
 end
 
 dep 'net-localhostname.scutil' do
   perf 'LocalHostName'
-  value 'virtue'
+  value 'DewaldV-MBP'
 end
 
 dep 'osx-settings-net' do

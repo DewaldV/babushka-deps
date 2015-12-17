@@ -4,7 +4,7 @@ dep 'osx-locale.defaults' do
   key 'AppleLanguages'
   global? true
   type 'array'
-  value 'en_ZA'
+  value 'en ja'
 end
 
 dep 'osx-measurementunits.defaults' do
