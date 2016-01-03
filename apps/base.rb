@@ -1,12 +1,19 @@
 # base.rb
 
 dep 'homebrew-cask.lib' do
+  requires 'homebrew tap'.with('caskroom/cask')
+  requires 'homebrew tap'.with('caskroom/fonts')
+  requires 'homebrew tap'.with('homebrew/versions')
   installs 'brew-cask'
 end
+
+dep '1password.cask'
 
 dep 'dockutil.bin'
 
 dep 'dropbox.cask'
+
+dep 'gpgtools.cask'
 
 dep 'htop.bin' do
   installs 'htop-osx'
@@ -17,12 +24,6 @@ dep 'tree.bin'
 dep 'iterm2.cask'
 
 dep 'istat-menus.cask'
-
-dep 'mvim.bin' do
-  installs 'macvim'
-end
-
-dep 'onepassword.cask'
 
 dep 'rescuetime.cask'
 
@@ -41,14 +42,14 @@ end
 
 dep 'osx-core-apps' do
   requires 'homebrew-cask.lib'
+  requires '1password.cask'
   requires 'dockutil.bin'
   requires 'dropbox.cask'
+  requires 'gpgtools.cask'
   requires 'htop.bin'
   requires 'tree.bin'
   requires 'istat-menus.cask'
   requires 'iterm2.cask'
-  #  requires 'mvim.bin'
-  requires 'onepassword.cask'
   requires 'vim.bin'
   requires 'zsh.bin'
 end

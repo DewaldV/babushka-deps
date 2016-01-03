@@ -6,11 +6,7 @@ dep 'colorpicker-antetype.cask'
 
 dep 'gimp.cask'
 
-dep 'inkscape.cask'
-
-dep 'rdio.cask'
-
-dep 'tagger.cask'
+dep 'deezer.cask'
 
 dep 'vlc.cask'
 
@@ -21,8 +17,7 @@ dep 'osx-media-all' do
 end
 
 dep 'osx-media-music' do
-  requires 'rdio.cask'
-  requires 'tagger.cask'
+  requires 'deezer.cask'
 end
 
 dep 'osx-media-video' do
@@ -31,5 +26,5 @@ end
 
 dep 'osx-media-imaging' do
   requires 'gimp.cask'
-  requires 'inkscape.cask'
+  requires 'colorpicker-antetype.cask'
 end

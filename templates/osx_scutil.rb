@@ -3,7 +3,12 @@ meta :scutil do
   accepts_value_for :value
 
   template do
-    met? { shell?("scutil --get #{perf}") && shell("scutil --get #{perf}") == value }
-    meet { sudo("scutil --set #{perf} #{value}") }
+    met? do
+      cmd = "scutil --get #{perf}"
+      shell?(cmd) && shell(cmd) == value
+    end
+    meet do
+      sudo("scutil --set #{perf} #{value}")
+    end
   end
 end

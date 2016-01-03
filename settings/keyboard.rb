@@ -2,8 +2,8 @@
 
 dep 'keyboard-enable-function-keys.defaults' do
   key 'com.apple.keyboard.fnState'
-  type 'boolean'
-  value 'false'
+  type 'int'
+  value '1'
   global? true
 end
 

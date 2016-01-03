@@ -7,6 +7,14 @@ dep 'enable-tap-bluetooth.defaults' do
   value '1'
 end
 
+dep 'enable-tap-behaviour-host.defaults' do
+  key 'com.apple.mouse.tapBehavior'
+  global? true
+  currentHost? true
+  type 'int'
+  value '1'
+end
+
 dep 'enable-tap-behaviour.defaults' do
   key 'com.apple.mouse.tapBehavior'
   global? true
@@ -16,6 +24,7 @@ end
 
 dep 'enable-tap-click' do
   requires 'enable-tap-bluetooth.defaults'
+  requires 'enable-tap-behaviour-host.defaults'
   requires 'enable-tap-behaviour.defaults'
 end
 
@@ -55,6 +64,6 @@ dep 'enable-right-click' do
 end
 
 dep 'osx-settings-mouse' do
-  #  requires 'enable-tap-click'
-  #  requires 'enable-right-click'
+  requires 'enable-tap-click'
+  requires 'enable-right-click'
 end
