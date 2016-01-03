@@ -52,6 +52,7 @@ dep 'osx-core-apps' do
   requires 'iterm2.cask'
   requires 'vim.bin'
   requires 'zsh.bin'
+  requires 'osx-fonts'
 end
 
 dep 'osx-core-apps-extended' do
