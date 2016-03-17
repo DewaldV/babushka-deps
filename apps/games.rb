@@ -4,7 +4,7 @@ dep 'desmume.cask'
 
 dep 'steam.cask'
 
-dep 'osx-games-all' do
+dep 'osx-games' do
   requires 'desmume.cask'
   requires 'steam.cask'
 end

@@ -1,10 +1,15 @@
-# Original from: https://github.com/bradfeehan/babushka-deps
+#Totally cribbed from https://github.com/icelab/babushka-deps/blob/master/homebrew_cask.rb
 meta :cask do
-  accepts_list_for :installs, :basename, choose_with: :via
+  accepts_list_for :installs, :basename
 
-  template do
+  template {
     requires CaskHelper.manager_dep
-    met? { installs.all? { |pkg| CaskHelper.has?(pkg) } }
-    meet { CaskHelper.handle_install! installs }
-  end
+
+    met? {
+      installs.all? { |pkg| CaskHelper.has?(pkg) }
+    }
+    meet {
+      CaskHelper.handle_install! installs
+    }
+  }
 end
