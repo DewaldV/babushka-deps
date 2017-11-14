@@ -9,6 +9,8 @@ dep 'htop.bin'
 
 dep 'iterm2.cask'
 
+dep 'jq.bin'
+
 dep 'the_silver_searcher.bin'
 
 dep 'tree.bin'
