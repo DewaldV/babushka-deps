@@ -56,7 +56,7 @@ dep 'home.dockicon' do
 end
 
 dep 'dock-default-icons' do
-  requires 'dock-remove-all-icons'
+  # requires 'dock-remove-all-icons'
   requires 'home.dockicon'
   requires 'documents.dockicon'
   requires 'downloads.dockicon'

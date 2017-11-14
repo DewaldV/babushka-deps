@@ -15,7 +15,7 @@ class CaskHelper < Babushka::BrewHelper
     end
 
     def caskroom
-      "/opt/homebrew-cask/Caskroom".p
+      "/usr/local/Caskroom".p
     end
 
     def should_sudo?

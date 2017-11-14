@@ -14,6 +14,7 @@ dep 'keyboard-enable-ui-full-control.defaults' do
   global? true
 end
 
+#TODO: Broken
 dep 'disable-auto-correct.defaults' do
   key 'NSAutomaticSpellingCorrectionEnabled'
   type 'boolean'
@@ -24,5 +25,4 @@ end
 dep 'osx-settings-keyboard' do
   requires 'keyboard-enable-function-keys.defaults'
   requires 'keyboard-enable-ui-full-control.defaults'
-  requires 'disable-auto-correct.defaults'
 end

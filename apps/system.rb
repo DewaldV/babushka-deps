@@ -6,7 +6,6 @@ dep 'osx-system-all' do
 end
 
 dep 'osx-system' do
-  requires 'osx-system-menu'
   requires 'osx-system-time-tracking'
 end
 

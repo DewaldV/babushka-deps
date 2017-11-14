@@ -6,7 +6,6 @@ dep 'osx-net-all' do
 end
 
 dep 'osx-net' do
-  requires 'osx-net-browsers'
   requires 'osx-net-firewall'
   requires 'osx-net-gpg'
   requires 'osx-net-vault'

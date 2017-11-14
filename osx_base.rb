@@ -7,7 +7,6 @@ dep 'osx-core' do
   requires 'osx-net'
   requires 'osx-system'
   requires 'osx-tools'
-  requires 'osx-virt'
   requires 'osx-settings'
 end
 
