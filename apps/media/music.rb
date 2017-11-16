@@ -1,9 +1,7 @@
 # music.rb
 
-dep 'deezer.cask'
-
-dep 'tagger.cask'
+dep 'marshallofsound-google-play-music-player.cask'
 
 dep 'osx-media-music' do
-  requires 'deezer.cask'
+  requires 'marshallofsound-google-play-music-player.cask'
 end
