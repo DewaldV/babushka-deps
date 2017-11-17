@@ -2,14 +2,12 @@
 
 dep 'ansible.bin'
 
-dep 'heroku.bin' do
-  requires 'heroku-toolbelt'
+dep 'terraform.bin'
+
+dep 'osx-dev-infra' do
+  requires 'terraform.bin'
 end
 
-dep 'osx-dev-infrastructure' do
+dep 'osx-dev-infra-extra' do
   requires 'ansible.bin'
-end
-
-dep 'osx-dev-infrastructure-extras' do
-  requires 'heroku.bin'
 end

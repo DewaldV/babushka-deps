@@ -9,6 +9,7 @@ dep 'osx-net' do
   requires 'osx-net-firewall'
   requires 'osx-net-gpg'
   requires 'osx-net-vault'
+  requires 'osx-net-vpn'
 end
 
 dep 'osx-net-extras' do
