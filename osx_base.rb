@@ -5,6 +5,7 @@ dep 'osx-core' do
   requires 'osx-dev'
   requires 'osx-fonts'
   requires 'osx-net'
+  requires 'osx-auth'
   requires 'osx-system'
   requires 'osx-tools'
   requires 'osx-settings'
