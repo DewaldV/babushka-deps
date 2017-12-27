@@ -14,7 +14,7 @@ end
 
 dep 'osx-dev-java-base' do
   requires 'java.cask'
-  requires 'jenv.cask'
+  requires 'jenv.bin'
 end
 
 dep 'osx-dev-java' do
