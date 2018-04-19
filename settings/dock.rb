@@ -74,17 +74,32 @@ end
 
 dep 'firefox.dockicon' do
   label 'FireFox'
-  path '~/Applications/Firefox.app'
+  path '/Applications/Firefox.app'
+end
+
+dep 'firefox-dev-edition.dockicon' do
+  label 'Firefox Developer Edition'
+  path '/Applications/Firefox Developer Edition.app'
 end
 
 dep 'opera.dockicon' do
   label 'Opera'
-  path '~/Applications/Opera.app'
+  path '/Applications/Opera.app'
 end
 
 dep 'chrome.dockicon' do
   label 'Chrome'
-  path '~/Applications/Google\ Chrome.app'
+  path '/Applications/Google\ Chrome.app'
+end
+
+dep 'google-play-music.dockicon' do
+  label 'Google Play Music'
+  path '/Applications/Google Play Music Desktop Player.app'
+end
+
+dep 'slack.dockicon' do
+  label 'Slack'
+  path '/Applications/Slack.app'
 end
 
 dep 'steam.dockicon' do
@@ -100,12 +115,12 @@ end
 dep 'dock-default-apps' do
   requires 'dock-default-icons'
   requires 'opera.dockicon'
-  requires 'chrome.dockicon'
   requires 'firefox.dockicon'
-  requires 'safari.dockicon'
-  requires 'itunes.dockicon'
+  requires 'firefox-dev-edition.dockicon'
   requires 'steam.dockicon'
+  requires 'slack.dockicon'
   requires 'iterm2.dockicon'
+  requires 'google-play-music.dockicon'
 end
 
 dep 'osx-settings-dock' do

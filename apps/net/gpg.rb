@@ -1,14 +1,10 @@
 # gpg.rb
 
-dep 'gpg.bin' do
-  installs 'gnupg'
-end
-
 dep 'gpg-suite.cask'
 
-dep 'keybase.bin'
+dep 'keybase.cask'
 
 dep 'osx-net-gpg' do
-  requires 'gpg.bin'
   requires 'gpg-suite.cask'
+  requires 'keybase.cask'
 end

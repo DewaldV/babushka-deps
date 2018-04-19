@@ -12,6 +12,8 @@ dep 'mvn.bin' do
   installs 'maven'
 end
 
+dep 'visualvm.cask'
+
 dep 'osx-dev-java-base' do
   requires 'java.cask'
   requires 'jenv.bin'
@@ -21,6 +23,7 @@ dep 'osx-dev-java' do
   requires 'osx-dev-java-base'
   requires 'gradle.bin'
   requires 'mvn.bin'
+  requires 'visualvm.cask'
 end
 
 dep 'osx-dev-java-ide' do

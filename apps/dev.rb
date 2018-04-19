@@ -9,13 +9,14 @@ end
 dep 'osx-dev' do
   requires 'osx-dev-scm'
   requires 'osx-dev-ruby'
+  requires 'osx-dev-python'
+  requires 'osx-dev-go'
+  requires 'osx-dev-infrastructure'
 end
 
 dep 'osx-dev-extras' do
-  requires 'osx-dev-infrastructure'
   requires 'osx-dev-java'
   requires 'osx-dev-javascript'
-  requires 'osx-dev-python'
 end
 
 dep 'osx-dev-extras-jvm' do

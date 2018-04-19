@@ -1,6 +1,6 @@
 # cpp.rb
 
-dep 'gcc-5.bin' do
+dep 'gcc-7.bin' do
   installs 'gcc'
 end
 

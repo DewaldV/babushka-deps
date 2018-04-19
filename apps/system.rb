@@ -1,15 +1,15 @@
 # base.rb
 
 dep 'osx-system-all' do
-  requires 'osx-core-apps'
-  requires 'osx-core-apps-extras'
+  requires 'osx-system'
+  requires 'osx-system-extras'
 end
 
 dep 'osx-system' do
-  requires 'osx-system-time-tracking'
 end
 
 dep 'osx-system-extras' do
+  requires 'osx-system-time-tracking'
   requires 'osx-system-windows'
   requires 'osx-system-x11'
 end
