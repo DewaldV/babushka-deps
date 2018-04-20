@@ -11,7 +11,7 @@ dep 'osx-dev' do
   requires 'osx-dev-ruby'
   requires 'osx-dev-python'
   requires 'osx-dev-go'
-  requires 'osx-dev-infrastructure'
+  requires 'osx-dev-infra'
 end
 
 dep 'osx-dev-extras' do
