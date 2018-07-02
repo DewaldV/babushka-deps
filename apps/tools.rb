@@ -17,6 +17,8 @@ dep 'iterm2.cask'
 
 dep 'jq.bin'
 
+dep 'stow.bin'
+
 dep 'tmux.bin'
 
 dep 'tree.bin'
@@ -37,6 +39,7 @@ dep 'osx-tools' do
   requires 'htop.bin'
   requires 'iterm2.cask'
   requires 'jq.bin'
+  requires 'stow.bin'
   requires 'tmux.bin'
   requires 'tree.bin'
   requires 'vim.bin'
