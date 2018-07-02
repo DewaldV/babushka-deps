@@ -1,8 +1,8 @@
 # base_deps.rb
 
 dep 'homebrew-cask-taps' do
-  requires 'homebrew tap'.with('caskroom/cask')
-  requires 'homebrew tap'.with('caskroom/fonts')
+  requires 'homebrew tap'.with('homebrew/cask')
+  requires 'homebrew tap'.with('homebrew/cask-fonts')
 end
 
 dep 'dockutil.bin'
